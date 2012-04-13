@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+	<cron>
+		<url>/com.jean.project/DailySender</url>
+		<description>Send daily texts.</description>
+		<schedule>every day 12:00</schedule>
+		<timezone>Europe/London</timezone>
+	</cron>
+		<cron>
+		<url>/com.jean.project/CheckTweets</url>
+		<description>Finds tweets with #vaccineconnector tag.</description>
+		<schedule>every day 00:00</schedule>
+		<timezone>Europe/London</timezone>
+	</cron>
+</cronentries>

@@ -1,0 +1,3 @@
+#wrap { box-shadow: 0 0 45px #bbb; }
+#wrap, #header-photo { border: 1px #ddd solid; }
+#header-photo img { margin-bottom: 1px; }

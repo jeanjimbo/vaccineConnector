@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Vaccine Connector</title>
+    
+    	<!--[if IE 6]>
+            <script src="js/ie6-transparency.js"></script>
+            <script>
+                DD_belatedPNG.fix('#wrap .line, #header #header-photo');
+            </script>
+            <link rel="stylesheet" href="styles/ie6.css" />
+        <![endif]--> 
+        <!--[if IE 7]>
+            <link rel="stylesheet" href="styles/ie7.css" />
+        <![endif]--> 
+        <!--[if IE 8]>
+            <link rel="stylesheet" href="styles/ie8.css" />
+        <![endif]--> 	
+        <!--[if IE 9]>
+            <link rel="stylesheet" href="styles/ie9.css" />
+        <![endif]--> 
+  </head>
+
+<BODY>
+<div id="wrap">
+		
+			<div id="header">
+		
+				<div id="header-content">
+    <h1>Centre Information</h1>
+    			</div>	
+									
+			</div><!--end header-content-->
+				
+			<div id="header-photo">				
+					<img src="images/placeholder.png" />
+			</div><!--end header-photo-->
+			
+		</div><!--end header-->
+<H2>Please Enter As Much Schedule Data Details As Possible Below</H2>
+
+<FORM ACTION="/com.jean.project/addschedule" METHOD="POST">
+  Vaccine Centre:
+  <INPUT TYPE="TEXT" NAME="centreName"><BR>
+  Passkey:
+  <INPUT TYPE="PASSWORD" NAME="pass"><BR>
+  Region:
+  <INPUT TYPE="TEXT" NAME="region"><BR>
+  Country:
+  <INPUT TYPE="TEXT" NAME="country"><BR>
+  Location:
+  <INPUT TYPE="TEXT" NAME="location"><BR>
+    Vaccine Code:
+  <INPUT TYPE="TEXT" NAME="vaccCode"><BR>
+    Vaccine Description:
+  <INPUT TYPE="TEXT" NAME="vaccDescr"><BR>
+    Disease:
+  <INPUT TYPE="TEXT" NAME="disease"><BR>
+    Schedule/Age of patient (in months):
+  <INPUT TYPE="TEXT" NAME="age"><BR>
+    Available From Date in dd/mm/yyyy format(enter All if always available):
+  <INPUT TYPE="TEXT" NAME="startDate"><BR>
+    Available Until in dd/mm/yyyy format (enter All if always available)</label>:
+  <INPUT TYPE="TEXT" NAME="endDate"><BR>
+      Risk Groups</label>:
+  <INPUT TYPE="TEXT" NAME="riskGroup"><BR>
+    <INPUT TYPE="SUBMIT" VALUE="Submit Schedule">
+</FORM>
+
+</BODY>
+</HTML>

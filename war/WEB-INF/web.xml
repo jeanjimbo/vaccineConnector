@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+<!-- listens for sms -->
+	<servlet>
+		<servlet-name>SMSListenerServlet</servlet-name>
+		<servlet-class>com.jean.project.SMSListenerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SMSListenerServlet</servlet-name>
+		<url-pattern>/com.jean.project/smslistenerservlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- listens for delivery message from SMS API provider -->
+	<servlet>
+		<servlet-name>Delivery</servlet-name>
+		<servlet-class>com.jean.project.Delivery</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Delivery</servlet-name>
+		<url-pattern>/com.jean.project/delivery</url-pattern>
+	</servlet-mapping>
+	
+<!-- adding centre, limited to admin -->
+	<servlet>
+		<servlet-name>AddCentre</servlet-name>
+		<servlet-class>com.jean.project.AddCentre</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCentre</servlet-name>
+		<url-pattern>/com.jean.project/addcentre</url-pattern>
+	</servlet-mapping>	
+	<security-constraint>  
+		  <web-resource-collection>    
+			  <web-resource-name>Admin Only Area</web-resource-name>
+			  <url-pattern>/addcentre</url-pattern>  
+		  </web-resource-collection>  
+		  <auth-constraint>    
+		  	<role-name>admin</role-name>  
+		  </auth-constraint>
+	  </security-constraint>
+	
+	<!-- adding schedules  -->
+	<servlet>
+		<servlet-name>AddSchedule</servlet-name>
+		<servlet-class>com.jean.project.AddSchedule</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddSchedule</servlet-name>
+		<url-pattern>/com.jean.project/addschedule</url-pattern>
+	</servlet-mapping>	
+	
+	<!-- handle emails -->
+	<servlet>  
+	  <servlet-name>catchallhandler</servlet-name>  
+	  <servlet-class>com.jean.project.MailCatchallServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>  
+	  <servlet-name>catchallhandler</servlet-name>  
+	  <url-pattern>/_ah/mail/*</url-pattern>
+	  </servlet-mapping>
+	  
+	  <!-- security constraints for email handlers -->
+	  <security-constraint>
+	<web-resource-collection>
+	<web-resource-name>Admin Only Area</web-resource-name>
+	<url-pattern>/_ah/mail/*</url-pattern>
+	</web-resource-collection>
+	<auth-constraint>
+	<role-name>admin</role-name>
+	</auth-constraint>
+	</security-constraint>
+	
+	<security-constraint>
+	<web-resource-collection>
+	<web-resource-name>Admin Only Area</web-resource-name>
+	<url-pattern>/_ah/mail/schedule*</url-pattern>
+	</web-resource-collection>
+	<auth-constraint>
+	<role-name>admin</role-name>
+	</auth-constraint>
+	</security-constraint>
+	  
+	  <!-- cron jobs -->
+	  	<servlet>  
+	  <servlet-name>DailySender</servlet-name>  
+	  <servlet-class>com.jean.project.DailySender</servlet-class>
+	  </servlet>
+	  <servlet-mapping>  
+	  <servlet-name>DailySender</servlet-name>  
+	  <url-pattern>/com.jean.project/DailySender</url-pattern>
+	  </servlet-mapping>
+
+		<servlet>  
+	  <servlet-name>CheckTweets</servlet-name>  
+	  <servlet-class>com.jean.project.CheckTweets</servlet-class>
+	  </servlet>
+	  <servlet-mapping>  
+	  <servlet-name>CheckTweets</servlet-name>  
+	  <url-pattern>/com.jean.project/CheckTweets</url-pattern>
+	  </servlet-mapping>
+	  
+</web-app>

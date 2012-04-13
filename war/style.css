@@ -1,0 +1,34 @@
+@CHARSET "ISO-8859-1";
+
+@import "styles/reset.css";
+
+#wrap { width: 730px; margin: 70px auto; font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif; color: #555; border: 1px #eee solid; padding: 70px 70px 20px 70px; -webkit-box-shadow: 0px 0 50px #aaa; -moz-box-shadow: 0px 0 30px #aaa; box-shadow: 0px 0 50px #aaa; background: #fff; background: -moz-linear-gradient(top, #EEEEEE 0%, #FFFFFF 2%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EEEEEE), color-stop(2%,#FFFFFF)); }
+body { font-family: times, serif; background-color: #fff; }
+h1 { font-size: 40px; margin: 0 0 30px 0; letter-spacing: -1px; }
+h2 { font-size: 34px; margin: 0 0 20px 0; }
+h3 { font-size: 24px; margin: 30px 0 20px 0; }
+h4 { font-size: 20px; margin: 30px 0 15px 0;}
+h5 { font-size: 18px; margin: 30px 0 5px 0;}
+p { font-size: 18px; line-height: 22px; margin: 0 0 15px 0; }
+a { text-decoration: none; color: #0b8bbb; }
+a:hover { color: #eee; }
+.line { clear: both; border-bottom: 2px #eee solid; }
+
+
+#header { float: left; width: 730px; margin: 0 0 55px 0; }
+#header #header-content { float: left; width: 450px; }
+#header #header-content h1 { margin: 0 0 2px 0; color: #444; }
+#header #header-content h2 { color: #0b8bbb; font-size: 28px; }
+#header #header-content p { font-size: 15px; margin: 0 0 0 1px; }
+#header #ct-details { float: left; margin: 18px 0 0 0; }
+#header #header-content .ct { font-size: 16px; color: #888; margin: 0; }
+#header #header-content .ct span { color: #444; width: 75px; float: left; } 
+#header #header-photo { float: right;  background-color: #eee;  padding: 5px 5px 2px 5px; -webkit-box-shadow: 0px 0 10px #aaa; -moz-box-shadow: 0px 0 10px #aaa; box-shadow: 0px 0 10px #aaa; }
+#header #header-photo img { width: 200px; height: 220px; border: 1px #ddd solid; }
+
+#content .entry-section { width: 600px; margin: 0 0 15px 0; }
+#content .entry-section h3 { font-size: 28px; color: #444; margin: 45px 0 30px 0;  }
+#content .entry-section h4.title { font-size: 22px; color: #0b8bbb; margin: 0 0 -26px 0; }
+#content .entry-section h4.meta { font-size: 22px; color: #777; }
+#content .entry-section p { font-size: 14px; color: #555; letter-spacing: 0; }
+#content .entry-section-item { padding: 0 0 15px 0; }
